@@ -12,25 +12,26 @@ step = (
 
 
 basestr = input()
-base1 = basestr[0]
+#base1 = basestr[0]
 base2 = int(basestr[1])
 
-if base1 == 'a':
-    base1 = 1
-elif base1 == 'b':
-    base1 = 2
-elif base1 == 'c':
-    base1 = 3
-elif base1 == 'd':
-    base1 = 4
-elif base1 == 'e':
-    base1 = 5
-elif base1 == 'f':
-    base1 = 6
-elif base1 == 'g':
-    base1 = 7                
-elif base1 == 'h':
-    base1 = 8
+# if base1 == 'a':
+#     base1 = 1
+# elif base1 == 'b':
+#     base1 = 2
+# elif base1 == 'c':
+#     base1 = 3
+# elif base1 == 'd':
+#     base1 = 4
+# elif base1 == 'e':
+#     base1 = 5
+# elif base1 == 'f':
+#     base1 = 6
+# elif base1 == 'g':
+#     base1 = 7                
+# elif base1 == 'h':
+#     base1 = 8
+base1 = int(ord(basestr[0])) - int(ord('a')) + 1
 
 base = [base1, base2]
 result = []
