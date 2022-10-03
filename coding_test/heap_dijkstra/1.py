@@ -10,12 +10,15 @@ n, m = map(int, input().split())
 #시작 노드 번호 입려 받기
 start = int(input())
 graph = [[] for i in range(n+1)]
-distance = [INF] * (n+1)
+print(graph) # [[], [], [], [], [], [], []]
+distance = [INF] * (n+1) # [1000000000, 1000000000, 1000000000, 1000000000, 1000000000, 1000000000, 1000000000]
 
 for _ in range(m):
     a, b, c = map(int, input().split())
     graph[a].append((b,c))
-    
+
+# [[], [(2, 2), (3, 5), (4, 1)], [(3, 3), (4, 2)], [(2, 3), (6, 5)], [(3, 3), (5, 1)], [(3, 1), (6, 2)], []]
+
 def dijkstra(start):
     q = []
     heapq.heappush(q, (0, start))
